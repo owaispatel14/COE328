@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Owais\Downloads\lab6\PartVI\simulation\qsim
+vFinalDesign
+Z1 !s100 DPCVWc_LQda_aD<HnMe7E1
+Z2 IjSRJ;;bKmHYXZJV]`:jm>3
+Z3 VmCZZK9=0eI3GeY9>]0Gnj1
+Z4 dC:\Users\Owais\Downloads\lab6\PartVI\simulation\qsim
+Z5 w1701625229
+Z6 8FinalDesign.vo
+Z7 FFinalDesign.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|FinalDesign.vo|
+Z10 o-work work -O0
+Z11 n@final@design
+!i10b 1
+!s85 0
+Z12 !s108 1701625231.961000
+Z13 !s107 FinalDesign.vo|
+!s101 -O0
+vFinalDesign_vlg_sample_tst
+!i10b 1
+Z14 !s100 h4W:C^1LaH9X>IJQ_@YhG2
+Z15 I9;bfRg@L@h4VZi>Qj[?mX0
+Z16 VZLScOo:5_FELiF21A@6m=1
+R4
+w1701625228
+Z17 8FinalDesign.vt
+Z18 FFinalDesign.vt
+L0 29
+R8
+r1
+!s85 0
+31
+!s108 1701625232.195000
+!s107 FinalDesign.vt|
+Z19 !s90 -work|work|FinalDesign.vt|
+!s101 -O0
+R10
+Z20 n@final@design_vlg_sample_tst

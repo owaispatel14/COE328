@@ -1,0 +1,528 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "12/03/2023 15:27:54"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    ModifiedControlUnit
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module ModifiedControlUnit_vlg_sample_tst(
+	A,
+	B,
+	Clock,
+	ControlUnitIn,
+	Reset,
+	sampler_tx
+);
+input [7:0] A;
+input [7:0] B;
+input  Clock;
+input  ControlUnitIn;
+input  Reset;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(A or B or Clock or ControlUnitIn or Reset)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module ModifiedControlUnit_vlg_check_tst (
+	NEGATIVE,
+	ODDEVEN,
+	OUTR1,
+	OUTR2,
+	R1,
+	R2,
+	SID_ODD,
+	Sign,
+	Student_ID,
+	STUDENTID,
+	sampler_rx
+);
+input  NEGATIVE;
+input  ODDEVEN;
+input [3:0] OUTR1;
+input [3:0] OUTR2;
+input [0:6] R1;
+input [0:6] R2;
+input [0:6] SID_ODD;
+input [0:6] Sign;
+input [0:6] Student_ID;
+input [3:0] STUDENTID;
+input sampler_rx;
+
+reg  NEGATIVE_expected;
+reg  ODDEVEN_expected;
+reg [3:0] OUTR1_expected;
+reg [3:0] OUTR2_expected;
+reg [0:6] R1_expected;
+reg [0:6] R2_expected;
+reg [0:6] SID_ODD_expected;
+reg [0:6] Sign_expected;
+reg [0:6] Student_ID_expected;
+reg [3:0] STUDENTID_expected;
+
+reg  NEGATIVE_prev;
+reg  ODDEVEN_prev;
+reg [3:0] OUTR1_prev;
+reg [3:0] OUTR2_prev;
+reg [0:6] R1_prev;
+reg [0:6] R2_prev;
+reg [0:6] SID_ODD_prev;
+reg [0:6] Sign_prev;
+reg [0:6] Student_ID_prev;
+reg [3:0] STUDENTID_prev;
+
+reg  NEGATIVE_expected_prev;
+reg [3:0] OUTR1_expected_prev;
+reg [3:0] OUTR2_expected_prev;
+
+reg  last_NEGATIVE_exp;
+reg [3:0] last_OUTR1_exp;
+reg [3:0] last_OUTR2_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:10] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 10'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	NEGATIVE_prev = NEGATIVE;
+	ODDEVEN_prev = ODDEVEN;
+	OUTR1_prev = OUTR1;
+	OUTR2_prev = OUTR2;
+	R1_prev = R1;
+	R2_prev = R2;
+	SID_ODD_prev = SID_ODD;
+	Sign_prev = Sign;
+	Student_ID_prev = Student_ID;
+	STUDENTID_prev = STUDENTID;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	NEGATIVE_expected_prev = NEGATIVE_expected;
+	OUTR1_expected_prev = OUTR1_expected;
+	OUTR2_expected_prev = OUTR2_expected;
+end
+
+
+
+// expected NEGATIVE
+initial
+begin
+	NEGATIVE_expected = 1'bX;
+end 
+// expected OUTR2[ 3 ]
+initial
+begin
+	OUTR2_expected[3] = 1'bX;
+end 
+// expected OUTR2[ 2 ]
+initial
+begin
+	OUTR2_expected[2] = 1'bX;
+end 
+// expected OUTR2[ 1 ]
+initial
+begin
+	OUTR2_expected[1] = 1'bX;
+end 
+// expected OUTR2[ 0 ]
+initial
+begin
+	OUTR2_expected[0] = 1'bX;
+end 
+// expected OUTR1[ 3 ]
+initial
+begin
+	OUTR1_expected[3] = 1'bX;
+end 
+// expected OUTR1[ 2 ]
+initial
+begin
+	OUTR1_expected[2] = 1'bX;
+end 
+// expected OUTR1[ 1 ]
+initial
+begin
+	OUTR1_expected[1] = 1'bX;
+end 
+// expected OUTR1[ 0 ]
+initial
+begin
+	OUTR1_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(NEGATIVE_expected or NEGATIVE or ODDEVEN_expected or ODDEVEN or OUTR1_expected or OUTR1 or OUTR2_expected or OUTR2 or R1_expected or R1 or R2_expected or R2 or SID_ODD_expected or SID_ODD or Sign_expected or Sign or Student_ID_expected or Student_ID or STUDENTID_expected or STUDENTID)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected NEGATIVE = %b | expected ODDEVEN = %b | expected OUTR1 = %b | expected OUTR2 = %b | expected R1 = %b | expected R2 = %b | expected SID_ODD = %b | expected Sign = %b | expected Student_ID = %b | expected STUDENTID = %b | ",NEGATIVE_expected_prev,ODDEVEN_expected_prev,OUTR1_expected_prev,OUTR2_expected_prev,R1_expected_prev,R2_expected_prev,SID_ODD_expected_prev,Sign_expected_prev,Student_ID_expected_prev,STUDENTID_expected_prev);
+	$display("| real NEGATIVE = %b | real ODDEVEN = %b | real OUTR1 = %b | real OUTR2 = %b | real R1 = %b | real R2 = %b | real SID_ODD = %b | real Sign = %b | real Student_ID = %b | real STUDENTID = %b | ",NEGATIVE_prev,ODDEVEN_prev,OUTR1_prev,OUTR2_prev,R1_prev,R2_prev,SID_ODD_prev,Sign_prev,Student_ID_prev,STUDENTID_prev);
+`endif
+	if (
+		( NEGATIVE_expected_prev !== 1'bx ) && ( NEGATIVE_prev !== NEGATIVE_expected_prev )
+		&& ((NEGATIVE_expected_prev !== last_NEGATIVE_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port NEGATIVE :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", NEGATIVE_expected_prev);
+		$display ("     Real value = %b", NEGATIVE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_NEGATIVE_exp = NEGATIVE_expected_prev;
+	end
+	if (
+		( OUTR1_expected_prev[0] !== 1'bx ) && ( OUTR1_prev[0] !== OUTR1_expected_prev[0] )
+		&& ((OUTR1_expected_prev[0] !== last_OUTR1_exp[0]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTR1[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTR1_expected_prev);
+		$display ("     Real value = %b", OUTR1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_OUTR1_exp[0] = OUTR1_expected_prev[0];
+	end
+	if (
+		( OUTR1_expected_prev[1] !== 1'bx ) && ( OUTR1_prev[1] !== OUTR1_expected_prev[1] )
+		&& ((OUTR1_expected_prev[1] !== last_OUTR1_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTR1[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTR1_expected_prev);
+		$display ("     Real value = %b", OUTR1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_OUTR1_exp[1] = OUTR1_expected_prev[1];
+	end
+	if (
+		( OUTR1_expected_prev[2] !== 1'bx ) && ( OUTR1_prev[2] !== OUTR1_expected_prev[2] )
+		&& ((OUTR1_expected_prev[2] !== last_OUTR1_exp[2]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTR1[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTR1_expected_prev);
+		$display ("     Real value = %b", OUTR1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_OUTR1_exp[2] = OUTR1_expected_prev[2];
+	end
+	if (
+		( OUTR1_expected_prev[3] !== 1'bx ) && ( OUTR1_prev[3] !== OUTR1_expected_prev[3] )
+		&& ((OUTR1_expected_prev[3] !== last_OUTR1_exp[3]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTR1[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTR1_expected_prev);
+		$display ("     Real value = %b", OUTR1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_OUTR1_exp[3] = OUTR1_expected_prev[3];
+	end
+	if (
+		( OUTR2_expected_prev[0] !== 1'bx ) && ( OUTR2_prev[0] !== OUTR2_expected_prev[0] )
+		&& ((OUTR2_expected_prev[0] !== last_OUTR2_exp[0]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTR2[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTR2_expected_prev);
+		$display ("     Real value = %b", OUTR2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_OUTR2_exp[0] = OUTR2_expected_prev[0];
+	end
+	if (
+		( OUTR2_expected_prev[1] !== 1'bx ) && ( OUTR2_prev[1] !== OUTR2_expected_prev[1] )
+		&& ((OUTR2_expected_prev[1] !== last_OUTR2_exp[1]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTR2[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTR2_expected_prev);
+		$display ("     Real value = %b", OUTR2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_OUTR2_exp[1] = OUTR2_expected_prev[1];
+	end
+	if (
+		( OUTR2_expected_prev[2] !== 1'bx ) && ( OUTR2_prev[2] !== OUTR2_expected_prev[2] )
+		&& ((OUTR2_expected_prev[2] !== last_OUTR2_exp[2]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTR2[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTR2_expected_prev);
+		$display ("     Real value = %b", OUTR2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_OUTR2_exp[2] = OUTR2_expected_prev[2];
+	end
+	if (
+		( OUTR2_expected_prev[3] !== 1'bx ) && ( OUTR2_prev[3] !== OUTR2_expected_prev[3] )
+		&& ((OUTR2_expected_prev[3] !== last_OUTR2_exp[3]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port OUTR2[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", OUTR2_expected_prev);
+		$display ("     Real value = %b", OUTR2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_OUTR2_exp[3] = OUTR2_expected_prev[3];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#110000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module ModifiedControlUnit_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [7:0] A;
+reg [7:0] B;
+reg Clock;
+reg ControlUnitIn;
+reg Reset;
+// wires                                               
+wire NEGATIVE;
+wire ODDEVEN;
+wire [3:0] OUTR1;
+wire [3:0] OUTR2;
+wire [0:6] R1;
+wire [0:6] R2;
+wire [0:6] SID_ODD;
+wire [0:6] Sign;
+wire [0:6] Student_ID;
+wire [3:0] STUDENTID;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+ModifiedControlUnit i1 (
+// port map - connection between master ports and signals/registers   
+	.A(A),
+	.B(B),
+	.Clock(Clock),
+	.ControlUnitIn(ControlUnitIn),
+	.NEGATIVE(NEGATIVE),
+	.ODDEVEN(ODDEVEN),
+	.OUTR1(OUTR1),
+	.OUTR2(OUTR2),
+	.R1(R1),
+	.R2(R2),
+	.Reset(Reset),
+	.SID_ODD(SID_ODD),
+	.Sign(Sign),
+	.Student_ID(Student_ID),
+	.STUDENTID(STUDENTID)
+);
+
+// Clock
+initial
+begin
+	repeat(9)
+	begin
+		Clock = 1'b0;
+		Clock = #5000 1'b1;
+		# 5000;
+	end
+	Clock = 1'b0;
+	Clock = #5000 1'b1;
+	Clock = #5000 1'b0;
+	Clock = #5000 1'b1;
+end 
+
+// ControlUnitIn
+initial
+begin
+	ControlUnitIn = 1'b0;
+	ControlUnitIn = #10000 1'b1;
+end 
+
+// Reset
+initial
+begin
+	Reset = 1'b0;
+end 
+// A[ 7 ]
+initial
+begin
+	A[7] = 1'b0;
+end 
+// A[ 6 ]
+initial
+begin
+	A[6] = 1'b0;
+end 
+// A[ 5 ]
+initial
+begin
+	A[5] = 1'b0;
+end 
+// A[ 4 ]
+initial
+begin
+	A[4] = 1'b1;
+end 
+// A[ 3 ]
+initial
+begin
+	A[3] = 1'b0;
+end 
+// A[ 2 ]
+initial
+begin
+	A[2] = 1'b0;
+end 
+// A[ 1 ]
+initial
+begin
+	A[1] = 1'b1;
+end 
+// A[ 0 ]
+initial
+begin
+	A[0] = 1'b0;
+end 
+// B[ 7 ]
+initial
+begin
+	B[7] = 1'b0;
+end 
+// B[ 6 ]
+initial
+begin
+	B[6] = 1'b1;
+end 
+// B[ 5 ]
+initial
+begin
+	B[5] = 1'b0;
+end 
+// B[ 4 ]
+initial
+begin
+	B[4] = 1'b1;
+end 
+// B[ 3 ]
+initial
+begin
+	B[3] = 1'b0;
+end 
+// B[ 2 ]
+initial
+begin
+	B[2] = 1'b0;
+end 
+// B[ 1 ]
+initial
+begin
+	B[1] = 1'b0;
+end 
+// B[ 0 ]
+initial
+begin
+	B[0] = 1'b0;
+end 
+
+ModifiedControlUnit_vlg_sample_tst tb_sample (
+	.A(A),
+	.B(B),
+	.Clock(Clock),
+	.ControlUnitIn(ControlUnitIn),
+	.Reset(Reset),
+	.sampler_tx(sampler)
+);
+
+ModifiedControlUnit_vlg_check_tst tb_out(
+	.NEGATIVE(NEGATIVE),
+	.ODDEVEN(ODDEVEN),
+	.OUTR1(OUTR1),
+	.OUTR2(OUTR2),
+	.R1(R1),
+	.R2(R2),
+	.SID_ODD(SID_ODD),
+	.Sign(Sign),
+	.Student_ID(Student_ID),
+	.STUDENTID(STUDENTID),
+	.sampler_rx(sampler)
+);
+endmodule
+

@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\lab6\PartVII\ModifiedControlUnit\simulation\qsim
+vModifiedControlUnit
+Z1 !s100 RPU90RWM298aU_K?;;Dk>3
+Z2 I_:j@OCbhgX;cJOW8LBbN40
+Z3 VVYLmFa=<d7a8GOERBD>S03
+Z4 dC:\Users\Owais\Downloads\lab6\PartVII\ModifiedControlUnit\simulation\qsim
+Z5 w1701635275
+Z6 8ModifiedControlUnit.vo
+Z7 FModifiedControlUnit.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|ModifiedControlUnit.vo|
+Z10 o-work work -O0
+Z11 n@modified@control@unit
+!i10b 1
+!s85 0
+Z12 !s108 1701635276.769000
+Z13 !s107 ModifiedControlUnit.vo|
+!s101 -O0
+vModifiedControlUnit_vlg_check_tst
+!i10b 1
+!s100 ;;bcbZI@[hURk05jVEC320
+ImiYHe4UhEmANkkLZgBiT^0
+Z14 V5:=d?W[B8X^L9Ri9?9J;A3
+R4
+R5
+Z15 8ModifiedControlUnit.vt
+Z16 FModifiedControlUnit.vt
+L0 65
+R8
+r1
+!s85 0
+31
+Z17 !s108 1701635276.893000
+Z18 !s107 ModifiedControlUnit.vt|
+Z19 !s90 -work|work|ModifiedControlUnit.vt|
+!s101 -O0
+R10
+Z20 n@modified@control@unit_vlg_check_tst
+vModifiedControlUnit_vlg_sample_tst
+!i10b 1
+Z21 !s100 737VNk4cB6;BzR4<A?Gah2
+Z22 IR;gk<7i;UamQ87jTnD>Pa3
+Z23 VCJnf;i`56NbUTn=P;Eo^i2
+R4
+R5
+R15
+R16
+L0 29
+R8
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R10
+Z24 n@modified@control@unit_vlg_sample_tst
+vModifiedControlUnit_vlg_vec_tst
+!i10b 1
+!s100 DTKZn=M1a>8gmP2:PT70X1
+IbiU[L7`l8jKVJk6?LldJ52
+Z25 VRha6DON=M4z>Y1`5ng[ca2
+R4
+R5
+R15
+R16
+Z26 L0 355
+R8
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R10
+Z27 n@modified@control@unit_vlg_vec_tst
